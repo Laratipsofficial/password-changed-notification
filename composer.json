@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "asdh/password-changed-notification",
+    "description": "A simple package to send mail notification to the user when their password is changed.",
     "keywords": [
-        ":vendor_name",
+        "Asdh",
         "laravel",
-        ":package_slug"
+        "password-changed-notification"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/asdh/password-changed-notification",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Laratips",
+            "email": "aashish201030@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Asdh\\PasswordChangedNotification\\": "src",
+            "Asdh\\PasswordChangedNotification\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Asdh\\PasswordChangedNotification\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Asdh\\PasswordChangedNotification\\PasswordChangedNotificationServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "PasswordChangedNotification": "Asdh\\PasswordChangedNotification\\Facades\\PasswordChangedNotification"
             }
         }
     },
