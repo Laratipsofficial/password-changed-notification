@@ -10,7 +10,7 @@ it('can send mail to the users when password is changed', function () {
 
     $user->password = bcrypt("password2");
     $user->save();
-    
+
     Mail::assertSent($user->passwordChangedNotificationMail()::class);
 });
 
@@ -21,6 +21,6 @@ it('will not send mail to the users when password is not changed', function () {
 
     $user->name = 'Laratips';
     $user->save();
-    
+
     Mail::assertNotSent($user->passwordChangedNotificationMail()::class);
 });

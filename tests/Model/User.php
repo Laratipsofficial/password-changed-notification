@@ -4,14 +4,15 @@ namespace Asdh\PasswordChangedNotification\Tests\Model;
 
 use Asdh\PasswordChangedNotification\Contracts\PasswordChangedNotificationContract;
 use Asdh\PasswordChangedNotification\Traits\PasswordChangedNotificationTrait;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements PasswordChangedNotificationContract
 {
-    use HasFactory, Notifiable, PasswordChangedNotificationTrait;
+    use HasFactory;
+    use Notifiable;
+    use PasswordChangedNotificationTrait;
 
     /**
      * The attributes that are mass assignable.
