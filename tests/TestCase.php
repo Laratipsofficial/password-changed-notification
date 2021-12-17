@@ -2,9 +2,9 @@
 
 namespace Asdh\PasswordChangedNotification\Tests;
 
+use Asdh\PasswordChangedNotification\PasswordChangedNotificationServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Asdh\PasswordChangedNotification\PasswordChangedNotificationServiceProvider;
 
 class TestCase extends Orchestra
 {

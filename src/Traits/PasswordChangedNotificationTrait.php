@@ -26,7 +26,7 @@ trait PasswordChangedNotificationTrait
 
     public function passwordChangedNotificationMail(): Mailable
     {
-        return new PasswordChangedNotificationMail;
+        return new PasswordChangedNotificationMail();
     }
 
     public function isPasswordChanged(): bool
@@ -41,7 +41,7 @@ trait PasswordChangedNotificationTrait
 
     public function sendPasswordChangedNotification(): void
     {
-        if (!$this->isPasswordChanged()) {
+        if (! $this->isPasswordChanged()) {
             return;
         }
 
