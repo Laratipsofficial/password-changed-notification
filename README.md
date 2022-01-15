@@ -51,6 +51,15 @@ public function passwordColumnName(): string
 }
 ```
 
+You can also modify the `name` column by adding this method. This will be used in the mail like Hi `Adam`.
+
+```php
+public function nameColumnName(): string
+{
+    return 'full_name';
+}
+```
+
 Further, if you want to modify the mail that is being sent to the user, you can publish the mail view using
 
 ```bash
@@ -64,7 +73,7 @@ You can also create your own mailable (the one that you create using `php artisa
 ```php
 public function passwordChangedNotificationMail(): Mailable
 {
-    return new YourOwnPasswordChangedNotificationMail;
+    return new YourOwnPasswordChangedNotificationMail($this);
 }
 ```
 
