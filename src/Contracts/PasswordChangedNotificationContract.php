@@ -10,6 +10,8 @@ interface PasswordChangedNotificationContract
 
     public function emailColumnName(): string;
 
+    public function nameColumnName(): string;
+
     public function passwordChangedNotificationMail(): Mailable;
 
     public function isPasswordChanged(): bool;

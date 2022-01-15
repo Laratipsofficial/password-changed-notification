@@ -2,6 +2,7 @@
 
 namespace Asdh\PasswordChangedNotification\Traits;
 
+use Asdh\PasswordChangedNotification\Contracts\PasswordChangedNotificationContract;
 use Asdh\PasswordChangedNotification\Mail\PasswordChangedNotificationMail;
 use Asdh\PasswordChangedNotification\Observers\PasswordChangedObserver;
 use Illuminate\Mail\Mailable;
@@ -24,9 +25,14 @@ trait PasswordChangedNotificationTrait
         return 'email';
     }
 
+    public function nameColumnName(): string
+    {
+        return 'name';
+    }
+
     public function passwordChangedNotificationMail(): Mailable
     {
-        return new PasswordChangedNotificationMail();
+        return new PasswordChangedNotificationMail($this);
     }
 
     public function isPasswordChanged(): bool
