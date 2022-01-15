@@ -2,7 +2,6 @@
 
 namespace Asdh\PasswordChangedNotification\Traits;
 
-use Asdh\PasswordChangedNotification\Contracts\PasswordChangedNotificationContract;
 use Asdh\PasswordChangedNotification\Mail\PasswordChangedNotificationMail;
 use Asdh\PasswordChangedNotification\Observers\PasswordChangedObserver;
 use Illuminate\Mail\Mailable;
