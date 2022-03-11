@@ -3,16 +3,12 @@
 namespace Asdh\PasswordChangedNotification\Traits;
 
 use Asdh\PasswordChangedNotification\Mail\PasswordChangedNotificationMail;
-use Asdh\PasswordChangedNotification\Observers\PasswordChangedObserver;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
 
 trait PasswordChangedNotificationTrait
 {
-    public static function booted()
-    {
-        static::observe(PasswordChangedObserver::class);
-    }
+    use ObservePasswordChanged;
 
     public function passwordColumnName(): string
     {
